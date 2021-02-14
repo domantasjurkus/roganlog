@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='roganlog.css') }}">
+
+
+<table>
+    <!--<tr>
+        <th class="tableCell">Spotify ID</td>
+        <th class="tableCell">Title</td>
+        <th class="tableCell">Completed</td>
+        <th class="tableCell">Skipped</td>
+        <th class="tableCell">Description</td>
+    </tr>-->
+    {% for entry in entries %}
+        <tr>
+            <td class="tableCell"><a href="https://open.spotify.com/episode/{{ entry[1] }}">link</a></td>
+            <!--<td class="tableCell"><input type="checkbox"></td>-->
+            <!--<td class="tableCell"><input type="checkbox"></td>-->
+            <td class="tableCell">{{ entry[2] }}</td>
+            <td class="tableCell">{{ entry[3] }}</td>
+        </tr>
+    {% endfor %}
+</table>
