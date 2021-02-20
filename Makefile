@@ -1,9 +1,9 @@
-run:
+run_flask:
 	FLASK_APP=roganlog_flask FLASK_ENV=development flask run
 
-dump:
-	python3 roganlog_flask/data/scrapped/pickle_dump.py
+run:
+	python3 roganlog_flask/app.py
 
 init:
-	make dump
+	python3 roganlog_flask/data/scrapped/pickle_dump.py
 	FLASK_APP=roganlog_flask FLASK_ENV=development flask init-db

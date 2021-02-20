@@ -3,8 +3,10 @@ from flask import (
 )
 from werkzeug.exceptions import abort
 
-from roganlog_flask.auth import login_required
-from roganlog_flask.data.db import get_db
+# from roganlog_flask.auth import login_required
+# from roganlog_flask.data.db import get_db
+from auth import login_required
+from data.db import get_db
 
 bp = Blueprint('blog', __name__)
 

@@ -2,10 +2,10 @@ import os
 
 from flask import Flask, redirect
 
-from .data import db
-from . import auth
-from . import blog
-from . import podcasts
+from data import db
+import auth
+import blog
+import podcasts
 
 def create_app(test_config=None):
     # create and configure the app
@@ -44,3 +44,6 @@ app.register_blueprint(blog.bp)
 @app.route('/')
 def index():
     return redirect('/podcasts')
+
+if __name__ == '__main__':
+    app.run()

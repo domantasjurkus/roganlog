@@ -1,8 +1,10 @@
 from flask import (
     Blueprint, flash, g, redirect, render_template, request, url_for
 )
-from roganlog_flask.auth import login_required
-from roganlog_flask.data.db import get_db, get_podcasts
+# from roganlog_flask.auth import login_required
+# from roganlog_flask.data.db import get_db, get_podcasts
+from auth import login_required
+from data.db import get_db, get_podcasts
 
 bp = Blueprint('podcasts', __name__)
 
